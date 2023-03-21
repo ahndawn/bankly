@@ -1,0 +1,58 @@
+### Conceptual Exercise
+
+Answer the following questions below:
+
+- What is a JWT?
+    <!-- JWT stands for JSON Web Token, which is a compact, URL-safe means of representing claims to be transferred between two parties. -->
+
+- What is the signature portion of the JWT?  What does it do?
+<!-- The signature is created by taking the header, the payload, and a secret key known only to the parties involved, and hashing them together to produce a unique signature. This signature is used to verify that the token has not been tampered with during transmission. -->
+
+- If a JWT is intercepted, can the attacker see what's inside the payload?
+  <!-- Yes, they can see the contents of the payload as it is a base64-encoded string that is not encrypted. However, they cannot modify the contents of the payload without knowing the secret key used to sign the token. -->
+
+- How can you implement authentication with a JWT?  Describe how it works at a high level.
+  <!-- Token verification: For subsequent requests that require authentication, the client includes the JWT in the request header, using the "Authorization" header with the "Bearer" scheme. The server verifies the token by checking its signature and validity, and then extracts the user's identity from the token payload. -->
+  
+
+- Compare and contrast unit, integration and end-to-end tests.
+  <!-- Unit tests:
+  Unit tests are focused on testing individual components or units of code in isolation from the rest of the application. They verify the behavior of a single function, method, or class.
+  <!-- Integration tests:
+  Integration tests verify that different components of an application work correctly when combined. They test the interactions between different parts of the application, such as between a web server and a database or between microservices.
+  <-- End-to-end tests:
+  End-to-end tests simulate user interactions with the application and test the entire system, from the user interface down to the database. They ensure that the application works as expected in a real-world scenario and catch issues that may not be detected by unit or integration tests.
+
+- What is a mock? What are some things you would mock?
+  <!-- a mock is a test double that simulates the behavior of a real object or system. Mocks are used to isolate the code being tested from its dependencies, such as external services or data stores. They allow developers to test the code in isolation and verify that it behaves correctly without relying on external dependencies. -->
+
+- What is continuous integration?
+  <!-- Continuous Integration is when developers regularly merge their code changes into a central repository and run automated tests to verify that the changes don't introduce new issues or conflicts with existing code. -->
+
+- What is an environment variable and what are they used for?
+    <!-- An environment variable is a dynamic value that can be set outside of a program or script and is available to that program or script as it runs. Environment variables are used to store system-wide configuration settings, as well as information specific to a particular user or process. -->
+
+- What is TDD? What are some benefits and drawbacks?
+  <!-- It is a software development practice where developers write automated tests before writing the actual code. Some benefits include:
+  Improved Code quality, faster feedback, better collaboration, reduced debugging time. 
+  Some drawbacks include: 
+  increased development time, over-reliance on tests, learning curve, maintenance overhead.-->
+
+- What is the value of using JSONSchema for validation?
+  <!-- JSONSchema helps ensure that the data you are working with is consistent and conforms to a specific structure, avoiding data inconsistencies that can cause issues down the line. -->
+
+- What are some ways to decide which code to test?
+  <!-- Prioritize testing code that is critical to the functionality of the system or application and code that is complex, such as algorithms or business logic. Prioritize testing based on the specific requirements and objectives of the project, and to balance the testing effort with available resources and project timelines.-->
+
+- What does `RETURNING` do in SQL? When would you use it?
+<!-- RETURNING is a clause that is used to return data from an INSERT, UPDATE, or DELETE statement. It is typically used in conjunction with INSERT or UPDATE statements to return data that has been modified by the statement.  -->
+
+- What are some differences between Web Sockets and HTTP?
+<!-- An HTTP starts sending data as responses when a request is received, whereas Websockets send and receives data based on data availability. -->
+
+- Did you prefer using Flask over Express? Why or why not (there is no right
+  answer here --- we want to see how you think about technology)?
+
+  <!-- I personally prefer flask. 
+  Flask benefits from the large and diverse Python ecosystem, which provides a wealth of libraries and tools that can be used in conjunction with the framework to build powerful and scalable web applications.\
+  It is also a lightweight framework that doesn't require much in terms of resources, making it a good choice for smaller or less resource-intensive projects. -->
